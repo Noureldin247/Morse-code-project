@@ -14,3 +14,5 @@ def encrypt_to_morse(phrase):
 def decrypt_from_morse(morse_code):
     morse_code = morse_code.split(' ')
     return ''.join(key for code in morse_code for key, value in Dictionary.items() if code == value)
+
+def start_app():
