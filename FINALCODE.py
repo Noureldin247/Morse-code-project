@@ -8,3 +8,9 @@ Dictionary= {
     ' ': ' '
 }
 
+def encrypt_to_morse(phrase):
+    return ' '.join(Dictionary.get(char.upper(), ' ') for char in phrase)
+
+def decrypt_from_morse(morse_code):
+    morse_code = morse_code.split(' ')
+    return ''.join(key for code in morse_code for key, value in Dictionary.items() if code == value)
